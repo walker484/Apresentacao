@@ -1,246 +1,507 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Davi Walker | Marketing Digital</title>
+
+<title>Davi Walker | Marketing Digital, Ideias e Negócios</title>
+
+<meta name="description" content="Davi Walker: aprenda marketing digital, descubra ideias para negócios, veja exemplos práticos, estratégias e curiosidades.">
 
 <style>
+:root {
+  --azul: #174ea6;
+  --azul-claro: #eaf2ff;
+  --texto: #202b3c;
+  --cinza: #64748b;
+  --fundo: #ffffff;
+  --borda: #dce6f3;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #0c0e16;
-  color: #ffffff;
+  background: var(--fundo);
+  color: var(--texto);
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
   width: 92%;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.azul { color: #3b82f6; }
+section {
+  padding: 65px 0;
+  scroll-margin-top: 75px;
+}
 
-.secao { padding: 60px 0; }
+h1, h2, h3 {
+  line-height: 1.3;
+}
+
+.azul {
+  color: var(--azul);
+}
+
+.subtitulo {
+  text-align: center;
+  color: var(--cinza);
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
 
 .titulo-secao {
   font-size: 2rem;
-  margin-bottom: 30px;
   text-align: center;
-}
-
-/* HERO */
-#hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.foto-hero {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  border-radius: 16px;
-  object-fit: cover;
-  margin-bottom: 20px;
-  border: 3px solid #3b82f6;
-}
-
-#hero h1 {
-  font-size: 3rem;
   margin-bottom: 12px;
+  color: #172b4d;
 }
 
-#hero p {
-  font-size: 1.2rem;
-  color: #cbd5e1;
-  max-width: 600px;
+/* CABEÇALHO */
+
+header {
+  background: #fff;
+  border-bottom: 1px solid var(--borda);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.seta {
-  margin-top: 60px;
-  font-size: 2rem;
-  animation: pular 1.5s infinite;
-}
-
-@keyframes pular {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-}
-
-/* SOBRE */
-#sobre { background: #111420; }
-
-.bloco-sobre {
-  width: 92%;
-  max-width: 420px;
-  margin: 0 auto;
-  background: #181c2b;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-/* FOTO DA BIOGRAFIA CORRIGIDA */
-.foto-sobre {
-  width: 100%;
-  height: auto;
-  max-height: 420px;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-  margin: 0 auto;
-  background: #ffffff;
-}
-
-.texto-sobre {
-  padding: 22px;
-  text-align: left;
-  color: #e2e8f0;
-}
-
-.texto-sobre p { margin-bottom: 12px; }
-
-/* NÚMEROS */
-#numeros .grid {
-  display: grid;
-  grid-template-columns: 1fr;
+.topo {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 20px;
-  width: 92%;
-  max-width: 420px;
-  margin: 0 auto;
 }
 
-.card-numero {
-  background: #181c2b;
-  padding: 26px;
-  border-radius: 16px;
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--azul);
+  white-space: nowrap;
 }
 
-.card-numero strong {
-  font-size: 2rem;
-  color: #3b82f6;
-  display: block;
-  margin-bottom: 8px;
+nav {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* SERVIÇOS */
-#servicos { background: #111420; }
+nav a {
+  font-size: 13px;
+  font-weight: bold;
+  color: #334155;
+}
 
-.grid-servicos {
+nav a:hover {
+  color: var(--azul);
+}
+
+/* INÍCIO */
+
+#inicio {
+  background: linear-gradient(180deg, #f1f6ff, #fff);
+  padding: 55px 0 70px;
+}
+
+.hero {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  width: 92%;
-  max-width: 420px;
-  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
 }
 
-.card-servico {
-  background: #181c2b;
-  padding: 22px;
-  border-radius: 14px;
+.hero-foto {
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 3px solid var(--azul);
+  display: block;
 }
 
-/* PLATAFORMA */
-#plataforma { background: #0c0e16; }
+.hero h1 {
+  font-size: clamp(2.3rem, 5vw, 3.7rem);
+  color: #172b4d;
+  margin-bottom: 18px;
+}
 
-.bloco-plataforma {
-  width: 92%;
-  max-width: 420px;
-  margin: 0 auto;
-  background: linear-gradient(135deg,#1e293b,#0f172a);
-  padding: 32px;
-  border-radius: 16px;
+.hero p {
+  font-size: 18px;
+  color: var(--cinza);
+  margin-bottom: 20px;
 }
 
 .botao {
-  display: block;
-  width: fit-content;
-  margin: 24px auto 0;
-  padding: 14px 30px;
-  background: #3b82f6;
+  display: inline-block;
+  background: var(--azul);
   color: white;
-  text-decoration: none;
-  border-radius: 10px;
+  padding: 13px 23px;
+  border-radius: 9px;
   font-weight: bold;
+  margin: 7px 5px 7px 0;
 }
 
-/* DEPOIMENTOS */
-#depoimentos { background: #111420; }
-
-.grid-depoimento {
-  width: 92%;
-  max-width: 420px;
-  margin: 0 auto;
+.botao:hover {
+  background: #103b80;
 }
 
-.card-depoimento {
-  background: #181c2b;
-  padding: 24px;
+.botao-secundario {
+  background: white;
+  color: var(--azul);
+  border: 1px solid var(--azul);
+}
+
+/* SOBRE */
+
+#sobre {
+  background: #f7faff;
+}
+
+.bloco-sobre {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 17px;
+  overflow: hidden;
+}
+
+.foto-sobre {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  max-height: 440px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: white;
+}
+
+.texto-sobre {
+  padding: 30px;
+}
+
+.texto-sobre p {
+  margin-bottom: 14px;
+}
+
+/* CARTÕES */
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 13px;
+  padding: 23px;
+  transition: .2s;
+}
+
+.card:hover {
+  border-color: var(--azul);
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  color: var(--azul);
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--cinza);
+  font-size: 15px;
+}
+
+.icone {
+  font-size: 30px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* MARKETING */
+
+#marketing {
+  background: #f7faff;
+}
+
+.artigo {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 27px;
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+}
+
+.artigo h3 {
+  color: var(--azul);
+  margin-bottom: 12px;
+}
+
+.artigo p {
+  margin-bottom: 12px;
+}
+
+.artigo ul {
+  padding-left: 22px;
+  margin: 12px 0;
+}
+
+/* DEMONSTRAÇÕES */
+
+#demonstracoes {
+  background: #f7faff;
+}
+
+.exemplo {
+  border-left: 4px solid var(--azul);
+  background: var(--azul-claro);
+  padding: 18px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.etiqueta {
+  display: inline-block;
+  background: #e4efff;
+  color: var(--azul);
+  padding: 5px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* IDEIAS */
+
+.ideia-destaque {
+  background: linear-gradient(120deg, #174ea6, #3978ca);
+  color: white;
+  border-radius: 17px;
+  padding: 35px;
+  margin-bottom: 25px;
+}
+
+.ideia-destaque h3 {
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+/* MINHA VISÃO */
+
+#visao {
+  background: #f7faff;
+}
+
+.visao {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  background: white;
+  border: 1px solid var(--borda);
+  padding: 35px;
+  border-radius: 15px;
+}
+
+/* CURIOSIDADE */
+
+#curiosidade {
+  text-align: center;
+}
+
+.curiosidade-box {
+  max-width: 750px;
+  margin: auto;
+  background: #edf4ff;
+  padding: 35px;
   border-radius: 16px;
-  margin-bottom: 20px;
+  border: 1px solid var(--borda);
 }
 
-.ver-mais {
+#curiosidadeTexto {
+  font-size: 19px;
+  color: #263b59;
+  margin: 15px 0;
+}
+
+/* SERVIÇOS */
+
+#servicos {
+  background: #f7faff;
+}
+
+.servico {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 19px;
+}
+
+.servico h3 {
+  color: var(--azul);
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+/* CURSOS */
+
+#cursos {
   text-align: center;
-  margin-top: 10px;
-  color: #3b82f6;
 }
 
-/* RODAPÉ */
-#rodape {
-  padding: 40px 0;
+.cursos-box {
+  max-width: 750px;
+  margin: auto;
+  padding: 35px;
+  background: #edf4ff;
+  border-radius: 15px;
+}
+
+/* PLATAFORMA */
+
+#plataforma {
+  background: #f7faff;
+}
+
+.plataforma-box {
+  max-width: 800px;
+  margin: auto;
+  padding: 35px;
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 16px;
   text-align: center;
-  background: #080a12;
 }
 
-.redes { margin: 20px 0; }
+/* CONTATO */
 
-.redes a {
-  color: #cbd5e1;
-  margin: 0 10px;
-  font-size: 1.1rem;
+#contato {
+  text-align: center;
+}
+
+footer {
+  background: #102c55;
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
+}
+
+footer a {
+  color: white;
+  margin: 7px;
+}
+
+footer p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #dbeafe;
 }
 
 /* WHATSAPP */
+
 .whatsapp-fixo {
   position: fixed;
+  bottom: 20px;
   right: 18px;
-  bottom: 18px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 58px;
+  height: 58px;
   background: #25d366;
+  color: white;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   font-size: 28px;
-  z-index: 999;
-  text-decoration: none;
-  font-weight: bold;
+  z-index: 200;
+  box-shadow: 0 3px 12px #0003;
 }
 
-/* TELAS MAIORES */
-@media (min-width: 700px) {
-  .grid-servicos {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 850px;
+/* CELULAR */
+
+@media(max-width: 750px) {
+
+  .topo {
+    flex-direction: column;
+    padding: 13px 0;
   }
 
-  #numeros .grid {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 850px;
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .hero-foto {
+    max-height: 320px;
+  }
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .bloco-sobre {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
+
+  .foto-sobre {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    min-height: 0;
+    object-fit: contain;
+  }
+
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 48px 0;
+  }
+
+  .titulo-secao {
+    font-size: 26px;
+  }
+
+  .texto-sobre {
+    padding: 22px;
   }
 }
 </style>
@@ -248,170 +509,810 @@ body {
 
 <body>
 
-<!-- WHATSAPP -->
-<a class="whatsapp-fixo"
-href="https://wa.me/SEUNUMERO"
-target="_blank">📞</a>
+<!-- CONFIGURAÇÕES DO SITE -->
 
-<!-- HERO -->
-<section id="hero">
+<script>
+const CONFIG = {
+  whatsapp: "SEUNUMERO",
+  email: "contato@daviwalker.com.br",
+  plataforma: "https://walker484.github.io/reserva/"
+};
+</script>
+
+<!-- CABEÇALHO -->
+
+<header>
+  <div class="container topo">
+
+    <a href="#inicio" class="logo">DAVI WALKER</a>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#marketing">Marketing</a>
+      <a href="#ideias">Ideias</a>
+      <a href="#demonstracoes">Exemplos</a>
+      <a href="#visao">Minha Visão</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- INÍCIO -->
+
+<section id="inicio">
+  <div class="container hero">
+
+    <div>
+      <h1>
+        O mundo muda.<br>
+        Suas ideias também podem mudar.
+      </h1>
+
+      <p>
+        Marketing digital, negócios, tecnologia e ideias
+        para transformar oportunidades em ações.
+      </p>
+
+      <p>
+        Aqui você aprende, descobre possibilidades e
+        acompanha demonstrações de marketing na prática.
+      </p>
+
+      <a href="#marketing" class="botao">
+        Aprender marketing
+      </a>
+
+      <a href="#ideias" class="botao botao-secundario">
+        Descobrir ideias
+      </a>
+    </div>
+
+    <div>
+      <img
+        class="hero-foto"
+        src="https://raw.githubusercontent.com/walker484/reserva/refs/heads/main/Screenshot_20261109_142753_Chrome.jpg"
+        alt="Foto provisória de apresentação de Davi Walker">
+    </div>
+
+  </div>
+</section>
+
+<!-- BIOGRAFIA COMPLETA -->
+
+<section id="sobre">
   <div class="container">
 
-    <img class="foto-hero"
-    src="https://raw.githubusercontent.com/walker484/reserva/refs/heads/main/Screenshot_20261109_142753_Chrome.jpg"
-    alt="Davi Walker">
+    <h2 class="titulo-secao">
+      Sobre <span class="azul">Davi Walker</span>
+    </h2>
 
-    <h1>Davi <span class="azul">Walker</span></h1>
+    <p class="subtitulo">
+      Conheça a história, a proposta e a visão por trás do projeto.
+    </p>
 
-    <p>Especialista em Marketing Digital para empresas locais</p>
+    <div class="bloco-sobre">
 
-    <div class="seta">↓</div>
-  </div>
-</section>
+      <img
+        class="foto-sobre"
+        src="https://raw.githubusercontent.com/walker484/Apresentacao/refs/heads/main/FabioSasso.png"
+        alt="Foto provisória da biografia de Davi Walker">
 
-<!-- BIOGRAFIA -->
-<section id="sobre" class="secao">
+      <div class="texto-sobre">
 
-  <h2 class="titulo-secao">
-    Sobre a <span class="azul">Davi Walker</span>
-  </h2>
+        <h3>Davi Walker — Marketing Digital</h3>
 
-  <div class="bloco-sobre">
+        <p>
+          A Davi Walker foi fundada no ano de 2024 pelo
+          designer brasileiro Davi Walker.
+        </p>
 
-    <img class="foto-sobre"
-    src="https://raw.githubusercontent.com/walker484/Apresentacao/refs/heads/main/FabioSasso.png"
-    alt="Davi Walker">
+        <p>
+          Sou Davi Walker, profissional especializado em
+          marketing digital dedicado a pequenos e médios
+          negócios. Eu crio toda a estratégia de marketing
+          para o seu negócio e disponibilizo uma plataforma
+          exclusiva para você acompanhar todos os resultados
+          em tempo real.
+        </p>
 
-    <div class="texto-sobre">
+        <p>
+          Meu objetivo: entregar resultado real e crescimento
+          sustentável para os meus clientes.
+        </p>
 
-      <p>A Davi Walker foi fundada no ano de 2024 pelo designer brasileiro Davi Walker.</p>
+        <p>
+          Este espaço também é dedicado ao conhecimento,
+          à criatividade, à troca de ideias e à descoberta
+          de novas oportunidades no mundo digital.
+        </p>
 
-      <p>Sou Davi Walker, profissional especializado em marketing digital dedicado a pequenos e médios negócios. Eu crio toda a estratégia de marketing para o seu negócio e disponibilizo uma plataforma exclusiva para você acompanhar todos os resultados em tempo real.</p>
-
-      <p>Meu objetivo: entregar resultado real e crescimento sustentável para os meus clientes.</p>
-
+      </div>
     </div>
   </div>
 </section>
 
-<!-- NÚMEROS -->
-<section id="numeros" class="secao">
+<!-- MARKETING DIGITAL -->
 
-  <h2 class="titulo-secao">
-    Resultados em <span class="azul">Números</span>
-  </h2>
+<section id="marketing">
+  <div class="container">
 
-  <div class="grid">
+    <h2 class="titulo-secao">
+      Aprenda <span class="azul">Marketing Digital</span>
+    </h2>
 
-    <div class="card-numero">
-      <strong>+500</strong>
-      Clientes atendidos
+    <p class="subtitulo">
+      Entenda como funciona o marketing e como aplicar
+      estratégias no dia a dia de uma empresa.
+    </p>
+
+    <div class="grade">
+
+      <article class="card">
+        <span class="icone">🔎</span>
+        <h3>O que é SEO?</h3>
+        <p>
+          É um conjunto de técnicas para ajudar um site
+          a aparecer nos resultados de pesquisa do Google.
+        </p>
+        <a class="botao" href="#artigo-seo">Aprender</a>
+      </article>
+
+      <article class="card">
+        <span class="icone">📢</span>
+        <h3>Tráfego Pago</h3>
+        <p>
+          São anúncios pagos para apresentar produtos,
+          serviços e empresas a públicos específicos.
+        </p>
+        <a class="botao" href="#artigo-trafego">Aprender</a>
+      </article>
+
+      <article class="card">
+        <span class="icone">📱</span>
+        <h3>Redes Sociais</h3>
+        <p>
+          Como utilizar publicações, vídeos e conteúdos
+          para construir relacionamento com clientes.
+        </p>
+        <a class="botao" href="#artigo-redes">Aprender</a>
+      </article>
+
+      <article class="card">
+        <span class="icone">✍️</span>
+        <h3>Marketing de Conteúdo</h3>
+        <p>
+          Produzir materiais que informam, ajudam
+          e despertam interesse no público.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="icone">📊</span>
+        <h3>Métricas</h3>
+        <p>
+          Aprenda a observar visualizações, cliques,
+          contatos, conversões e outros indicadores.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="icone">🛒</span>
+        <h3>Vendas pela Internet</h3>
+        <p>
+          Descubra como apresentar produtos, organizar
+          catálogos e facilitar a compra.
+        </p>
+      </article>
+
     </div>
 
-    <div class="card-numero">
-      <strong>+300</strong>
-      Projetos concluídos
+    <!-- ARTIGO SEO -->
+
+    <article class="artigo" id="artigo-seo">
+
+      <span class="etiqueta">AULA PRÁTICA 01</span>
+
+      <h3>Como uma empresa pode aparecer no Google?</h3>
+
+      <p>
+        Imagine uma pessoa procurando no Google:
+        "Onde comprar perfume masculino?"
+      </p>
+
+      <p>
+        Se uma loja possui um site organizado, páginas
+        informativas e conteúdo relevante, ela pode
+        ter mais oportunidades de aparecer nessa pesquisa.
+      </p>
+
+      <h3>Exemplo de aplicação</h3>
+
+      <div class="exemplo">
+        <strong>Título de uma página:</strong>
+        <p>Como escolher um perfume masculino para o dia a dia</p>
+
+        <strong>Objetivo:</strong>
+        <p>Ajudar pessoas interessadas a encontrar informações
+        sobre perfumes e conhecer os produtos da loja.</p>
+      </div>
+
+      <p>
+        <strong>O que aprender?</strong>
+        SEO não é simplesmente colocar palavras no site.
+        É criar conteúdo útil para responder às pesquisas
+        das pessoas.
+      </p>
+
+    </article>
+
+    <!-- ARTIGO TRÁFEGO -->
+
+    <article class="artigo" id="artigo-trafego">
+
+      <span class="etiqueta">AULA PRÁTICA 02</span>
+
+      <h3>Como funciona um anúncio na Internet?</h3>
+
+      <p>
+        Uma loja pode pagar para divulgar um produto
+        para pessoas que tenham interesse naquele tipo
+        de produto.
+      </p>
+
+      <div class="exemplo">
+        <strong>Exemplo de anúncio demonstrativo:</strong>
+
+        <h3>Conheça nossa coleção de perfumes!</h3>
+
+        <p>
+          Descubra fragrâncias para diferentes momentos
+          e encontre uma opção para você.
+        </p>
+
+        <strong>Botão:</strong>
+        <p>Conhecer os perfumes</p>
+      </div>
+
+      <p>
+        Depois da divulgação, é importante acompanhar
+        quantas pessoas visualizaram, clicaram e entraram
+        em contato.
+      </p>
+
+    </article>
+
+    <!-- ARTIGO REDES -->
+
+    <article class="artigo" id="artigo-redes">
+
+      <span class="etiqueta">AULA PRÁTICA 03</span>
+
+      <h3>Como criar uma publicação que chama atenção?</h3>
+
+      <p>
+        Uma boa publicação precisa ter uma mensagem clara,
+        uma imagem adequada e uma informação interessante.
+      </p>
+
+      <div class="exemplo">
+        <strong>Exemplo para uma padaria:</strong>
+
+        <p>
+          🥖 Pão quentinho saindo do forno!
+        </p>
+
+        <p>
+          Comece seu dia com sabor. Venha conhecer
+          nossas opções de pães e quitandas.
+        </p>
+
+        <strong>Chamada:</strong>
+        <p>Faça uma visita!
+        </p>
+      </div>
+
+      <p>
+        Uma publicação pode despertar interesse, mas
+        seu resultado precisa ser acompanhado por dados.
+      </p>
+
+    </article>
+
+  </div>
+</section>
+
+<!-- IDEIAS PARA NEGÓCIOS -->
+
+<section id="ideias">
+  <div class="container">
+
+    <h2 class="titulo-secao">
+      Ideias para <span class="azul">Negócios</span>
+    </h2>
+
+    <p class="subtitulo">
+      Ideias que podem ser adaptadas à realidade
+      de diferentes empresas.
+    </p>
+
+    <div class="ideia-destaque">
+
+      <span class="etiqueta">IDEIA EM DESTAQUE</span>
+
+      <h3>Transforme um produto em uma história.</h3>
+
+      <p>
+        Em vez de apenas mostrar uma fotografia de um produto,
+        apresente como ele é utilizado, para quem serve
+        e por que pode ser interessante.
+      </p>
+
     </div>
 
-    <div class="card-numero">
-      <strong>+8</strong>
-      Anos de experiência
+    <div class="grade">
+
+      <div class="card">
+        <span class="icone">🍞</span>
+        <h3>Padaria</h3>
+        <p>
+          Mostrar a preparação dos produtos,
+          novidades e horários de funcionamento.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="icone">💇</span>
+        <h3>Salão de beleza</h3>
+        <p>
+          Apresentar serviços, cuidados e
+          transformações autorizadas pelos clientes.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="icone">🏪</span>
+        <h3>Loja de roupas</h3>
+        <p>
+          Criar combinações, mostrar novidades
+          e apresentar sugestões de looks.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="icone">🍕</span>
+        <h3>Restaurante</h3>
+        <p>
+          Divulgar cardápio, ingredientes,
+          pratos e ofertas.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="icone">🔧</span>
+        <h3>Prestadores de serviços</h3>
+        <p>
+          Mostrar o trabalho realizado,
+          explicar os serviços e facilitar contatos.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="icone">📸</span>
+        <h3>Fotografia</h3>
+        <p>
+          Apresentar portfólio, bastidores
+          e exemplos de trabalhos.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DEMONSTRAÇÕES -->
+
+<section id="demonstracoes">
+  <div class="container">
+
+    <h2 class="titulo-secao">
+      Marketing na <span class="azul">Prática</span>
+    </h2>
+
+    <p class="subtitulo">
+      Aqui não queremos apenas explicar.
+      Queremos mostrar como uma estratégia pode funcionar.
+    </p>
+
+    <article class="artigo">
+
+      <span class="etiqueta">SIMULAÇÃO DIDÁTICA</span>
+
+      <h3>Exemplo: divulgação de uma loja de perfumes</h3>
+
+      <p><strong>Problema:</strong> poucas pessoas conhecem a loja.</p>
+
+      <p><strong>Ideia:</strong> criar conteúdo apresentando
+      os perfumes e suas características.</p>
+
+      <p><strong>Ação:</strong> publicar fotografias,
+      produzir vídeos e organizar um catálogo digital.</p>
+
+      <p><strong>Acompanhamento:</strong> observar
+      visualizações, cliques, mensagens e vendas.</p>
+
+      <div class="exemplo">
+        <h3>Indicadores que podemos acompanhar</h3>
+        <p>Visualizações: quantas vezes o conteúdo foi visto.</p>
+        <p>Cliques: quantas pessoas clicaram no anúncio ou link.</p>
+        <p>Contatos: quantas pessoas enviaram mensagens.</p>
+        <p>Conversões: quantas pessoas realizaram a ação desejada.</p>
+      </div>
+
+      <p>
+        Este exemplo é uma demonstração educativa.
+        Não representa uma campanha real nem resultados
+        de um cliente.
+      </p>
+
+    </article>
+
+    <div class="grade">
+
+      <div class="card">
+        <h3>Antes da estratégia</h3>
+        <p>
+          Identificar o problema, conhecer o público
+          e entender o objetivo do negócio.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Durante a estratégia</h3>
+        <p>
+          Aplicar as ações, divulgar os conteúdos
+          e acompanhar os indicadores.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Depois da estratégia</h3>
+        <p>
+          Analisar os dados, identificar oportunidades
+          e planejar melhorias.
+        </p>
+      </div>
+
     </div>
 
+  </div>
+</section>
+
+<!-- MINHA VISÃO -->
+
+<section id="visao">
+  <div class="container">
+
+    <h2 class="titulo-secao">
+      Minha <span class="azul">Visão</span>
+    </h2>
+
+    <div class="visao">
+
+      <h3>Marketing não é apenas aparecer.</h3>
+
+      <p>
+        Uma empresa pode ter milhares de visualizações
+        e ainda não conseguir transformar esse interesse
+        em oportunidades de negócio.
+      </p>
+
+      <p>
+        Por isso, acredito que é importante pensar
+        no objetivo de cada ação, conhecer as pessoas
+        que queremos alcançar e acompanhar os resultados.
+      </p>
+
+      <p>
+        A tecnologia muda, as ferramentas evoluem
+        e as oportunidades aparecem.
+        Aprender e experimentar faz parte do crescimento.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- CURIOSIDADE DO DIA -->
+
+<section id="curiosidade">
+  <div class="container">
+
+    <h2 class="titulo-secao">
+      Curiosidade <span class="azul">do Dia</span>
+    </h2>
+
+    <div class="curiosidade-box">
+
+      <span class="icone">💡</span>
+
+      <h3>Você sabia?</h3>
+
+      <p id="curiosidadeTexto">
+        Uma página de produto pode responder dúvidas
+        que o vendedor recebe todos os dias.
+      </p>
+
+      <button class="botao" onclick="novaCuriosidade()">
+        Ver outra curiosidade
+      </button>
+
+    </div>
   </div>
 </section>
 
 <!-- SERVIÇOS -->
-<section id="servicos" class="secao">
 
-  <h2 class="titulo-secao">
-    Meus <span class="azul">Serviços</span>
-  </h2>
+<section id="servicos">
+  <div class="container">
 
-  <div class="grid-servicos">
+    <h2 class="titulo-secao">
+      Serviços de <span class="azul">Marketing</span>
+    </h2>
 
-    <div class="card-servico"><h3>✅ SEO — Aparecer no Google</h3></div>
-    <div class="card-servico"><h3>✅ Tráfego Pago — Anúncios</h3></div>
-    <div class="card-servico"><h3>✅ Marketing de Conteúdo — Textos</h3></div>
-    <div class="card-servico"><h3>✅ Redes Sociais — Publicações</h3></div>
-    <div class="card-servico"><h3>✅ E-mail Marketing — Mensagens</h3></div>
-    <div class="card-servico"><h3>✅ Métricas — Acompanhamento de Resultados</h3></div>
-    <div class="card-servico"><h3>✅ Fotografia — Divulgação de Produtos</h3></div>
-    <div class="card-servico"><h3>✅ Vídeos Publicitários</h3></div>
-    <div class="card-servico"><h3>✅ Catálogo e Loja Virtual</h3></div>
-    <div class="card-servico"><h3>✅ Marketing Local — Clientes da Região</h3></div>
-    <div class="card-servico"><h3>✅ Planejamento de Campanhas</h3></div>
-    <div class="card-servico"><h3>✅ Identidade Visual — Marca</h3></div>
+    <p class="subtitulo">
+      Conheça as áreas de atuação da Davi Walker.
+    </p>
 
+    <div class="grade">
+
+      <div class="servico">
+        <h3>01. SEO</h3>
+        Aparecer no Google.
+      </div>
+
+      <div class="servico">
+        <h3>02. Tráfego Pago</h3>
+        Divulgação por anúncios.
+      </div>
+
+      <div class="servico">
+        <h3>03. Marketing de Conteúdo</h3>
+        Criação de textos e conteúdos.
+      </div>
+
+      <div class="servico">
+        <h3>04. Redes Sociais</h3>
+        Planejamento de publicações.
+      </div>
+
+      <div class="servico">
+        <h3>05. E-mail Marketing</h3>
+        Comunicação por mensagens.
+      </div>
+
+      <div class="servico">
+        <h3>06. Métricas</h3>
+        Acompanhamento de resultados.
+      </div>
+
+      <div class="servico">
+        <h3>07. Fotografia</h3>
+        Divulgação de produtos.
+      </div>
+
+      <div class="servico">
+        <h3>08. Vídeos Publicitários</h3>
+        Produção de vídeos comerciais.
+      </div>
+
+      <div class="servico">
+        <h3>09. Catálogo e Loja Virtual</h3>
+        Apresentação de produtos online.
+      </div>
+
+      <div class="servico">
+        <h3>10. Marketing Local</h3>
+        Divulgação para clientes da região.
+      </div>
+
+      <div class="servico">
+        <h3>11. Planejamento de Campanhas</h3>
+        Organização de estratégias.
+      </div>
+
+      <div class="servico">
+        <h3>12. Identidade Visual</h3>
+        Construção de marca.
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- PLATAFORMA -->
-<section id="plataforma" class="secao">
+<!-- CURSOS -->
 
-  <h2 class="titulo-secao">
-    Plataforma <span class="azul">Davi Walker</span>
-  </h2>
+<section id="cursos">
+  <div class="container">
 
-  <div class="bloco-plataforma">
+    <h2 class="titulo-secao">
+      Cursos <span class="azul">Gratuitos</span>
+    </h2>
 
-    <p>💼 <strong>Área exclusiva para os meus clientes</strong></p>
+    <div class="cursos-box">
 
-    <p>Depois da contratação, você recebe o acesso para visualizar todo o marketing digital que eu preparei para o seu negócio: relatórios, gráficos de desempenho, acompanhamento dos serviços e resultados.</p>
+      <span class="icone">🎓</span>
 
-    <a href="https://walker484.github.io/reserva/"
-    target="_blank" class="botao">
-      Acessar minha plataforma
+      <h3>Aprenda e desenvolva novas habilidades.</h3>
+
+      <p>
+        Estamos preparando uma área de aprendizado
+        com aulas, materiais, exemplos e conteúdos
+        sobre marketing digital e negócios.
+      </p>
+
+      <p>
+        Em breve, novos materiais gratuitos.
+      </p>
+
+      <span class="etiqueta">ÁREA EM PREPARAÇÃO</span>
+
+    </div>
+  </div>
+</section>
+
+<!-- PLATAFORMA DE CLIENTES -->
+
+<section id="plataforma">
+  <div class="container">
+
+    <h2 class="titulo-secao">
+      Plataforma <span class="azul">Davi Walker</span>
+    </h2>
+
+    <div class="plataforma-box">
+
+      <span class="icone">💼</span>
+
+      <h3>Área exclusiva para clientes</h3>
+
+      <p>
+        Um espaço para acompanhar os serviços,
+        solicitações, entregas, relatórios,
+        gráficos e resultados do trabalho realizado.
+      </p>
+
+      <a id="linkPlataforma" class="botao"
+         href="https://walker484.github.io/reserva/">
+        Acessar minha plataforma
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+
+<section id="contato">
+  <div class="container">
+
+    <h2 class="titulo-secao">
+      Vamos conversar?
+    </h2>
+
+    <p class="subtitulo">
+      Conheça o trabalho da Davi Walker
+      e descubra novas possibilidades para seu negócio.
+    </p>
+
+    <a id="linkWhatsApp" class="botao"
+       href="https://wa.me/SEUNUMERO">
+      Conversar pelo WhatsApp
     </a>
 
-  </div>
-</section>
-
-<!-- DEPOIMENTOS -->
-<section id="depoimentos" class="secao">
-
-  <h2 class="titulo-secao">
-    Depoimentos <span class="azul">Clientes</span>
-  </h2>
-
-  <div class="grid-depoimento">
-
-    <div class="card-depoimento">
-      <p>“O serviço de marketing mudou o meu faturamento.”</p>
-      <small>— Cliente atendido por Davi Walker</small>
-    </div>
-
-    <div class="card-depoimento">
-      <p>“Consigo acompanhar todos os resultados pela plataforma.”</p>
-      <small>— Cliente atendido por Davi Walker</small>
-    </div>
-
-    <p class="ver-mais">+ Ver mais depoimentos</p>
+    <p style="margin-top:15px">
+      <a id="linkEmail" class="azul"
+         href="mailto:contato@daviwalker.com.br">
+        contato@daviwalker.com.br
+      </a>
+    </p>
 
   </div>
 </section>
 
 <!-- RODAPÉ -->
-<section id="rodape">
 
-  <div class="container">
+<footer>
 
-    <p>contato@daviwalker.com.br</p>
+  <h2>DAVI WALKER</h2>
 
-    <div class="redes">
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
-      <a href="#">TikTok</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Facebook</a>
-    </div>
+  <p>Marketing Digital, Ideias e Visões.</p>
 
-    <p style="margin-top:30px;color:#717a8c">
-      © 2026 Davi Walker — Todos os direitos reservados
-    </p>
-
+  <div style="margin-top:18px">
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#marketing">Marketing</a>
+    <a href="#ideias">Ideias</a>
+    <a href="#contato">Contato</a>
   </div>
-</section>
+
+  <p>
+    © 2026 Davi Walker — Todos os direitos reservados.
+  </p>
+
+</footer>
+
+<!-- WHATSAPP FIXO -->
+
+<a id="whatsappFixo" class="whatsapp-fixo"
+   href="https://wa.me/SEUNUMERO"
+   target="_blank"
+   rel="noopener"
+   aria-label="Conversar pelo WhatsApp">
+  ☎
+</a>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// CONFIGURAÇÃO DOS LINKS
+
+document.getElementById("linkPlataforma").href =
+  CONFIG.plataforma;
+
+const numero = CONFIG.whatsapp.replace(/\D/g, "");
+
+if (numero && numero !== "SEUNUMERO") {
+  const link = "https://wa.me/" + numero;
+
+  document.getElementById("linkWhatsApp").href = link;
+  document.getElementById("whatsappFixo").href = link;
+}
+
+document.getElementById("linkEmail").href =
+  "mailto:" + CONFIG.email;
+
+document.getElementById("linkEmail").textContent =
+  CONFIG.email;
+
+
+// CURIOSIDADES
+
+const curiosidades = [
+  "Uma página de produto pode responder dúvidas que o vendedor recebe todos os dias.",
+
+  "O título de uma página ajuda o visitante a entender rapidamente o assunto.",
+
+  "Uma fotografia bem feita pode ajudar uma loja a apresentar melhor seus produtos.",
+
+  "Nem todo visitante compra imediatamente. Algumas pessoas pesquisam, comparam e voltam depois.",
+
+  "Uma campanha precisa ter um objetivo claro antes de começar.",
+
+  "O Google utiliza diferentes sinais para organizar os resultados das pesquisas.",
+
+  "Um conteúdo que ensina alguma coisa também pode ajudar uma empresa a conquistar confiança.",
+
+  "Visualizações e vendas são indicadores diferentes. É importante saber o que cada número representa."
+];
+
+let curiosidadeAtual = 0;
+
+function novaCuriosidade() {
+  curiosidadeAtual++;
+
+  if (curiosidadeAtual >= curiosidades.length) {
+    curiosidadeAtual = 0;
+  }
+
+  document.getElementById("curiosidadeTexto").textContent =
+    curiosidades[curiosidadeAtual];
+}
+
+</script>
 
 </body>
 </html>
