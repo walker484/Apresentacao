@@ -1,148 +1,403 @@
 <!DOCTYPE html>
-<html lang="pt‑BR">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF‑8">
-<meta name="viewport" content="width=device‑width, initial‑scale=1.0">
-<title>Davi Walker | Marketing Digital</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Davi Walker | Marketing Digital</title>
+
 <style>
-*{margin:0;padding:0;box‑sizing:border‑box}
-body{background:#0c0e16;color:#ffffff;font‑family:Arial,sans‑serif;line‑height:1.6}
-.container{width:92%;max‑width:900px;margin:0 auto}
-.azul{color:#3b82f6}
-.secao{padding:60px 0}
-.titulo‑secao{font‑size:2rem;margin‑bottom:30px;text‑align:center}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Hero */
-#hero{min‑height:100vh;display:flex;flex‑direction:column;justify‑content:center;align‑items:center;text‑align:center;padding:40px 20px}
-.foto‑hero{width:100%;max‑width:700px;height:auto;border‑radius:16px;object‑fit:cover;margin‑bottom:20px;border:3px solid #3b82f6}
-#hero h1{font‑size:3rem;margin‑bottom:12px}
-#hero p{font‑size:1.2rem;color:#cbd5e1;max‑width:600px}
-.seta{margin‑top:60px;font‑size:2rem;animation:pular 1.5s infinite}
-@keyframes pular{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+body {
+  background: #0c0e16;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
 
-/* Sobre / Biografia — CARD CENTRALIZADO NÃO ESTICADO */
-#sobre{background:#111420}
-.bloco‑sobre{width:92%;max‑width:420px;margin:0 auto;background:#181c2b;border‑radius:16px;overflow:hidden}
-.foto‑sobre{width:100%;height:260px;object‑fit:cover;object‑position:top;display:block}
-.texto‑sobre{padding:22px;text‑align:left;color:#e2e8f0}
+.container {
+  width: 92%;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-/* Big Numbers */
-#numeros .grid{display:grid;grid‑template‑columns:1fr;gap:20px;width:92%;max‑width:420px;margin:0 auto}
-.card‑numero{background:#181c2b;padding:26px;border‑radius:16px}
-.card‑numero strong{font‑size:2rem;color:#3b82f6;display:block;margin‑bottom:8px}
+.azul { color: #3b82f6; }
 
-/* Serviços */
-#servicos{background:#111420}
-.grid‑servicos{display:grid;grid‑template‑columns:1fr;gap:16px;width:92%;max‑width:420px;margin:0 auto}
-.card‑servico{background:#181c2b;padding:22px;border‑radius:14px}
+.secao { padding: 60px 0; }
 
-/* Plataforma Cliente */
-#plataforma{background:#0c0e16}
-.bloco‑plataforma{width:92%;max‑width:420px;margin:0 auto;background:linear‑gradient(135deg,#1e293b,#0f172a);padding:32px;border‑radius:16px}
-.botao{display:block;width:fit‑content;margin:24px auto 0;padding:14px 30px;background:#3b82f6;color:white;text‑decoration:none;border‑radius:10px;font‑weight:bold}
+.titulo-secao {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
 
-/* Depoimentos */
-#depoimentos{background:#111420}
-.grid‑depoimento{width:92%;max‑width:420px;margin:0 auto}
-.card‑depoimento{background:#181c2b;padding:24px;border‑radius:16px;margin‑bottom:20px}
-.ver‑mais{text‑align:center;margin‑top:10px;color:#3b82f6}
+/* HERO */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
 
-/* Rodapé */
-#rodape{padding:40px 0;text‑align:center;background:#080a12}
-.redes{margin:20px 0}
-.redes a{color:#cbd5e1;margin:0 10px;font‑size:1.1rem}
+.foto-hero {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #3b82f6;
+}
 
-/* Botão WhatsApp Fixo */
-.whatsapp‑fixo{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border‑radius:50%;background:#25d366;display:flex;align‑items:center;justify‑content:center;color:white;font‑size:28px;z‑index:999;text‑decoration:none;font‑weight:bold}
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  max-width: 600px;
+}
+
+.seta {
+  margin-top: 60px;
+  font-size: 2rem;
+  animation: pular 1.5s infinite;
+}
+
+@keyframes pular {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* SOBRE */
+#sobre { background: #111420; }
+
+.bloco-sobre {
+  width: 92%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: #181c2b;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* FOTO DA BIOGRAFIA CORRIGIDA */
+.foto-sobre {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.texto-sobre {
+  padding: 22px;
+  text-align: left;
+  color: #e2e8f0;
+}
+
+.texto-sobre p { margin-bottom: 12px; }
+
+/* NÚMEROS */
+#numeros .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 92%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.card-numero {
+  background: #181c2b;
+  padding: 26px;
+  border-radius: 16px;
+}
+
+.card-numero strong {
+  font-size: 2rem;
+  color: #3b82f6;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* SERVIÇOS */
+#servicos { background: #111420; }
+
+.grid-servicos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 92%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.card-servico {
+  background: #181c2b;
+  padding: 22px;
+  border-radius: 14px;
+}
+
+/* PLATAFORMA */
+#plataforma { background: #0c0e16; }
+
+.bloco-plataforma {
+  width: 92%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: linear-gradient(135deg,#1e293b,#0f172a);
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.botao {
+  display: block;
+  width: fit-content;
+  margin: 24px auto 0;
+  padding: 14px 30px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* DEPOIMENTOS */
+#depoimentos { background: #111420; }
+
+.grid-depoimento {
+  width: 92%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.card-depoimento {
+  background: #181c2b;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.ver-mais {
+  text-align: center;
+  margin-top: 10px;
+  color: #3b82f6;
+}
+
+/* RODAPÉ */
+#rodape {
+  padding: 40px 0;
+  text-align: center;
+  background: #080a12;
+}
+
+.redes { margin: 20px 0; }
+
+.redes a {
+  color: #cbd5e1;
+  margin: 0 10px;
+  font-size: 1.1rem;
+}
+
+/* WHATSAPP */
+.whatsapp-fixo {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  z-index: 999;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* TELAS MAIORES */
+@media (min-width: 700px) {
+  .grid-servicos {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 850px;
+  }
+
+  #numeros .grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 850px;
+  }
+}
 </style>
 </head>
+
 <body>
 
-<!-- BOTÃO WHATSAPP FIXO -->
-<a class="whatsapp‑fixo" href="https://wa.me/SEUNUMERO" target="_blank">📞</a>
+<!-- WHATSAPP -->
+<a class="whatsapp-fixo"
+href="https://wa.me/SEUNUMERO"
+target="_blank">📞</a>
 
 <!-- HERO -->
 <section id="hero">
   <div class="container">
-    <img class="foto‑hero" src="https://raw.githubusercontent.com/walker484/reserva/refs/heads/main/Screenshot_20261109_142753_Chrome.jpg" alt="Davi Walker">
-    <h1>Davi <span class="azul">Walker</span></h1>
-    <p>Especialista em Marketing Digital para empresas locais</p>
+
+    <img class="foto-hero"
+    src="https://raw.githubusercontent.com/walker484/reserva/refs/heads/main/Screenshot_20261109_142753_Chrome.jpg"
+    alt="Davi Walker">
+
+    <h1>Davi <span class="azul">Walker</span></h1>
+
+    <p>Especialista em Marketing Digital para empresas locais</p>
+
     <div class="seta">↓</div>
   </div>
 </section>
 
-<!-- SOBRE / BIOGRAFIA -->
+<!-- BIOGRAFIA -->
 <section id="sobre" class="secao">
-  <h2 class="titulo‑secao">Sobre a <span class="azul">Davi Walker</span></h2>
-  <div class="bloco‑sobre">
-    <img class="foto‑sobre" src="https://raw.githubusercontent.com/walker484/Apresentacao/refs/heads/main/FabioSasso.png" alt="Davi Walker">
-    <div class="texto‑sobre">
-      <p>A Davi Walker foi fundada no ano de 2024 pelo designer brasileiro Davi Walker.</p>
-      <p>Sou Davi Walker, profissional especializado em marketing digital dedicado a pequenos e médios negócios. Eu crio toda a estratégia de marketing para o seu negócio e disponibilizo uma plataforma exclusiva para você acompanhar todos os resultados em tempo real.</p>
+
+  <h2 class="titulo-secao">
+    Sobre a <span class="azul">Davi Walker</span>
+  </h2>
+
+  <div class="bloco-sobre">
+
+    <img class="foto-sobre"
+    src="https://raw.githubusercontent.com/walker484/Apresentacao/refs/heads/main/FabioSasso.png"
+    alt="Davi Walker">
+
+    <div class="texto-sobre">
+
+      <p>A Davi Walker foi fundada no ano de 2024 pelo designer brasileiro Davi Walker.</p>
+
+      <p>Sou Davi Walker, profissional especializado em marketing digital dedicado a pequenos e médios negócios. Eu crio toda a estratégia de marketing para o seu negócio e disponibilizo uma plataforma exclusiva para você acompanhar todos os resultados em tempo real.</p>
+
       <p>Meu objetivo: entregar resultado real e crescimento sustentável para os meus clientes.</p>
+
     </div>
   </div>
 </section>
 
-<!-- BIG NUMBERS -->
+<!-- NÚMEROS -->
 <section id="numeros" class="secao">
-  <h2 class="titulo‑secao">Resultados em <span class="azul">Números</span></h2>
+
+  <h2 class="titulo-secao">
+    Resultados em <span class="azul">Números</span>
+  </h2>
+
   <div class="grid">
-    <div class="card‑numero"><strong>+500</strong>Clientes atendidos</div>
-    <div class="card‑numero"><strong>+300</strong>Projetos concluídos</div>
-    <div class="card‑numero"><strong>+8</strong>Anos de experiência</div>
+
+    <div class="card-numero">
+      <strong>+500</strong>
+      Clientes atendidos
+    </div>
+
+    <div class="card-numero">
+      <strong>+300</strong>
+      Projetos concluídos
+    </div>
+
+    <div class="card-numero">
+      <strong>+8</strong>
+      Anos de experiência
+    </div>
+
   </div>
 </section>
 
-<!-- 12 SERVIÇOS -->
+<!-- SERVIÇOS -->
 <section id="servicos" class="secao">
-  <h2 class="titulo‑secao">Meus <span class="azul">Serviços</span></h2>
-  <div class="grid‑servicos">
-    <div class="card‑servico"><h3>✅ SEO — Aparecer no Google</h3></div>
-    <div class="card‑servico"><h3>✅ Tráfego Pago — Anúncios</h3></div>
-    <div class="card‑servico"><h3>✅ Marketing de Conteúdo — Textos</h3></div>
-    <div class="card‑servico"><h3>✅ Redes Sociais — Publicações</h3></div>
-    <div class="card‑servico"><h3>✅ E‑mail Marketing — Mensagens</h3></div>
-    <div class="card‑servico"><h3>✅ Métricas — Acompanhamento de Resultados</h3></div>
-    <div class="card‑servico"><h3>✅ Fotografia — Divulgação de Produtos</h3></div>
-    <div class="card‑servico"><h3>✅ Vídeos Publicitários</h3></div>
-    <div class="card‑servico"><h3>✅ Catálogo e Loja Virtual</h3></div>
-    <div class="card‑servico"><h3>✅ Marketing Local — Clientes da Região</h3></div>
-    <div class="card‑servico"><h3>✅ Planejamento de Campanhas</h3></div>
-    <div class="card‑servico"><h3>✅ Identidade Visual — Marca</h3></div>
+
+  <h2 class="titulo-secao">
+    Meus <span class="azul">Serviços</span>
+  </h2>
+
+  <div class="grid-servicos">
+
+    <div class="card-servico"><h3>✅ SEO — Aparecer no Google</h3></div>
+    <div class="card-servico"><h3>✅ Tráfego Pago — Anúncios</h3></div>
+    <div class="card-servico"><h3>✅ Marketing de Conteúdo — Textos</h3></div>
+    <div class="card-servico"><h3>✅ Redes Sociais — Publicações</h3></div>
+    <div class="card-servico"><h3>✅ E-mail Marketing — Mensagens</h3></div>
+    <div class="card-servico"><h3>✅ Métricas — Acompanhamento de Resultados</h3></div>
+    <div class="card-servico"><h3>✅ Fotografia — Divulgação de Produtos</h3></div>
+    <div class="card-servico"><h3>✅ Vídeos Publicitários</h3></div>
+    <div class="card-servico"><h3>✅ Catálogo e Loja Virtual</h3></div>
+    <div class="card-servico"><h3>✅ Marketing Local — Clientes da Região</h3></div>
+    <div class="card-servico"><h3>✅ Planejamento de Campanhas</h3></div>
+    <div class="card-servico"><h3>✅ Identidade Visual — Marca</h3></div>
+
   </div>
 </section>
 
-<!-- PLATAFORMA DO CLIENTE -->
+<!-- PLATAFORMA -->
 <section id="plataforma" class="secao">
-  <h2 class="titulo‑secao">Plataforma <span class="azul">Davi Walker</span></h2>
-  <div class="bloco‑plataforma">
+
+  <h2 class="titulo-secao">
+    Plataforma <span class="azul">Davi Walker</span>
+  </h2>
+
+  <div class="bloco-plataforma">
+
     <p>💼 <strong>Área exclusiva para os meus clientes</strong></p>
+
     <p>Depois da contratação, você recebe o acesso para visualizar todo o marketing digital que eu preparei para o seu negócio: relatórios, gráficos de desempenho, acompanhamento dos serviços e resultados.</p>
-    <a href="https://walker484.github.io/reserva/" target="_blank" class="botao">Acessar minha plataforma</a>
+
+    <a href="https://walker484.github.io/reserva/"
+    target="_blank" class="botao">
+      Acessar minha plataforma
+    </a>
+
   </div>
 </section>
 
 <!-- DEPOIMENTOS -->
 <section id="depoimentos" class="secao">
-  <h2 class="titulo‑secao">Depoimentos <span class="azul">Clientes</span></h2>
-  <div class="grid‑depoimento">
-    <div class="card‑depoimento">
+
+  <h2 class="titulo-secao">
+    Depoimentos <span class="azul">Clientes</span>
+  </h2>
+
+  <div class="grid-depoimento">
+
+    <div class="card-depoimento">
       <p>“O serviço de marketing mudou o meu faturamento.”</p>
-      <small>‑ Cliente atendido por Davi Walker</small>
+      <small>— Cliente atendido por Davi Walker</small>
     </div>
-    <div class="card‑depoimento">
+
+    <div class="card-depoimento">
       <p>“Consigo acompanhar todos os resultados pela plataforma.”</p>
-      <small>‑ Cliente atendido por Davi Walker</small>
+      <small>— Cliente atendido por Davi Walker</small>
     </div>
-    <p class="ver‑mais">+ Ver mais depoimentos</p>
+
+    <p class="ver-mais">+ Ver mais depoimentos</p>
+
   </div>
 </section>
 
-<!-- RODAPÉ CONTATO -->
+<!-- RODAPÉ -->
 <section id="rodape">
+
   <div class="container">
+
     <p>contato@daviwalker.com.br</p>
+
     <div class="redes">
       <a href="#">Instagram</a>
       <a href="#">YouTube</a>
@@ -150,7 +405,11 @@ body{background:#0c0e16;color:#ffffff;font‑family:Arial,sans‑serif;line‑he
       <a href="#">LinkedIn</a>
       <a href="#">Facebook</a>
     </div>
-    <p style="margin‑top:30px;color:#717a8c">© 2026 Davi Walker — Todos os direitos reservados</p>
+
+    <p style="margin-top:30px;color:#717a8c">
+      © 2026 Davi Walker — Todos os direitos reservados
+    </p>
+
   </div>
 </section>
 
